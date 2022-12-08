@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             bool endApp = false;
+            int timeCalc = 0;
 
             Console.WriteLine("Console Calculator in C#\n");
             Console.WriteLine("------------------------\n");
@@ -69,6 +70,7 @@
                 if (Console.ReadLine().ToLower() == "n") endApp = true;
 
                 Console.WriteLine("\n");
+                Console.WriteLine("The Calculator was used {0} times.\n", ++timeCalc);
             }
             return;
         }
