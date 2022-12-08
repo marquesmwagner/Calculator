@@ -1,16 +1,13 @@
-﻿
-namespace CalculatorProgram
+﻿namespace CalculatorProgram
 {
     class Program
     {
         static void Main(string[] args)
         {
             bool endApp = false;
-            
+
             Console.WriteLine("Console Calculator in C#\n");
             Console.WriteLine("------------------------\n");
-
-            Calculator calculator = new Calculator();
             
             while (!endApp)
             {
@@ -45,11 +42,16 @@ namespace CalculatorProgram
                 Console.WriteLine("\td - Divide");
                 Console.WriteLine("Your option?");
 
-                string op = Console.ReadLine();
+                string op = Console.ReadLine().ToLower();
+                while (!op.Equals("a") && !op.Equals("s") && !op.Equals("m") && !op.Equals("d"))
+                {
+                    Console.WriteLine("Please enter a valid operator.");
+                    op = Console.ReadLine().ToLower();
+                }
 
                 try
                 {
-                    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
@@ -64,7 +66,7 @@ namespace CalculatorProgram
                 Console.WriteLine("------------------------\n");
 
                 Console.WriteLine("Press 'n' and Enter to close the app, or any other Key and Enter to continue: ");
-                if (Console.ReadLine() == "n") endApp = true;
+                if (Console.ReadLine().ToLower() == "n") endApp = true;
 
                 Console.WriteLine("\n");
             }
