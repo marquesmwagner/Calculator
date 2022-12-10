@@ -23,6 +23,7 @@ namespace Calculator
                 Console.WriteLine("\tS - Subtraction");
                 Console.WriteLine("\tM - Multiplication");
                 Console.WriteLine("\tD - Division");
+                Console.WriteLine("\tU - View the amount of times the calculator was used");
                 Console.WriteLine("\tQ - Quit Program");
 
                 string op = Console.ReadLine().Trim().ToLower();
@@ -41,7 +42,10 @@ namespace Calculator
                     case "d":
                         engine.Division();
                         break;
-                        case "q":
+                    case "u":
+                        Helpers.PrintNumberOfUses(CalculatorEngine.numberOfUses);
+                        break;
+                    case "q":
                         Console.WriteLine("\nQuit Program. Thx for use!");
                         calcIsRun = true;
                         break;

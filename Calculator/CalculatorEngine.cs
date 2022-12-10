@@ -8,6 +8,7 @@ namespace Calculator
 {
     internal class CalculatorEngine
     {
+        public static int numberOfUses = 0;
         internal void Addition()
         {
             Console.WriteLine("\nType the first number: ");
@@ -15,6 +16,7 @@ namespace Calculator
             Console.WriteLine("\nType the second number: ");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+            numberOfUses++;
         }
         internal void Subtraction() 
         {
@@ -23,6 +25,7 @@ namespace Calculator
             Console.WriteLine("\nType the second number: ");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
+            numberOfUses++;
         }
         internal void Multiplication()
         {
@@ -31,6 +34,7 @@ namespace Calculator
             Console.WriteLine("\nType the second number: ");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+            numberOfUses++;
         }
         internal void Division()
         {
@@ -44,6 +48,7 @@ namespace Calculator
                 secondNumber = Helpers.GetNumber();
             }
             Console.WriteLine($"\n{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+            numberOfUses++;
         }
     }
 }

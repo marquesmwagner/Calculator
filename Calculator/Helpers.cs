@@ -21,5 +21,9 @@ namespace Calculator
             }
             return number;
         }
+        internal static void PrintNumberOfUses(int uses) 
+        {
+            Console.WriteLine($"\nThe Calculator was used {uses} times.");
+        }
     }
 }
