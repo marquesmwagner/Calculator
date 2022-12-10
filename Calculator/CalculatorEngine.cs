@@ -10,19 +10,40 @@ namespace Calculator
     {
         internal void Addition()
         {
-
+            Console.WriteLine("\nType the first number: ");
+            var firstNumber = Helpers.GetNumber();
+            Console.WriteLine("\nType the second number: ");
+            var secondNumber = Helpers.GetNumber();
+            Console.WriteLine($"\n{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
         }
         internal void Subtraction() 
-        { 
-
+        {
+            Console.WriteLine("\nType the first number: ");
+            var firstNumber = Helpers.GetNumber();
+            Console.WriteLine("\nType the second number: ");
+            var secondNumber = Helpers.GetNumber();
+            Console.WriteLine($"\n{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
         }
         internal void Multiplication()
         {
-
+            Console.WriteLine("\nType the first number: ");
+            var firstNumber = Helpers.GetNumber();
+            Console.WriteLine("\nType the second number: ");
+            var secondNumber = Helpers.GetNumber();
+            Console.WriteLine($"\n{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
         }
         internal void Division()
         {
-
+            Console.WriteLine("\nType the first number: ");
+            var firstNumber = Helpers.GetNumber();
+            Console.WriteLine("\nType the second number: ");
+            var secondNumber = Helpers.GetNumber();
+            while (secondNumber == 0)
+            {
+                Console.WriteLine("Enter a non-zero divisor.");
+                secondNumber = Helpers.GetNumber();
+            }
+            Console.WriteLine($"\n{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
         }
     }
 }

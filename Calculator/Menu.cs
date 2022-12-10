@@ -12,13 +12,13 @@ namespace Calculator
         internal void ShowMenu()
         {
             Console.WriteLine("Console Calculator in C#\n");
-            Console.WriteLine("------------------------\n");
+            Console.WriteLine("------------------------");
 
             var calcIsRun = false;
             
             do
             {
-                Console.WriteLine("Choose an operation: ");
+                Console.WriteLine("\nChoose an operation: ");
                 Console.WriteLine("\tA - Addition");
                 Console.WriteLine("\tS - Subtraction");
                 Console.WriteLine("\tM - Multiplication");
@@ -42,11 +42,11 @@ namespace Calculator
                         engine.Division();
                         break;
                         case "q":
-                        Console.WriteLine("Quit Program");
+                        Console.WriteLine("\nQuit Program. Thx for use!");
                         calcIsRun = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid input");
+                        Console.WriteLine("Invalid input\n");
                         break;
                 }
             } while (!calcIsRun);
