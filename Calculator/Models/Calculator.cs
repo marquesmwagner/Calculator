@@ -8,5 +8,8 @@ namespace Calculator.Models
 {
     internal class Calculator
     {
+        public double FirstNumber { get; set; }
+        public double SecondNumber { get; set; }
+        public double Result { get; set; }
     }
 }
