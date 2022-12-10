@@ -11,5 +11,6 @@ namespace Calculator.Models
         public double FirstNumber { get; set; }
         public double SecondNumber { get; set; }
         public double Result { get; set; }
+        public string Signal { get; set; }
     }
 }

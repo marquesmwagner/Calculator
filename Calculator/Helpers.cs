@@ -27,14 +27,25 @@ namespace Calculator
         {
             Console.WriteLine($"\nThe Calculator was used {uses} times.");
         }
-        internal static void StoreCalculations(double firstNumber, double secondNumber)
+        internal static void StoreCalculations(double firstNumber, double secondNumber, string signal)
         {
             calculator.Add(new Models.Calculator
             {
                 FirstNumber = firstNumber,
                 SecondNumber = secondNumber,
-                Result = firstNumber + secondNumber
+                Result = firstNumber + secondNumber,
+                Signal = signal
             });
+        }
+        internal static void PrintLatestCalculations()
+        {
+            Console.WriteLine("\nLastest Calculatios:");
+            Console.WriteLine("--------------------\n");
+            foreach (var calculation in calculator) 
+            {
+                Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+            }
+            Console.WriteLine("\n--------------------");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Calculator
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber);
+            Helpers.StoreCalculations(firstNumber, secondNumber, "+");
         }
         internal void Subtraction() 
         {
@@ -27,7 +27,7 @@ namespace Calculator
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber);
+            Helpers.StoreCalculations(firstNumber, secondNumber, "-");
         }
         internal void Multiplication()
         {
@@ -37,7 +37,7 @@ namespace Calculator
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber);
+            Helpers.StoreCalculations(firstNumber, secondNumber, "*");
         }
         internal void Division()
         {
@@ -52,7 +52,7 @@ namespace Calculator
             }
             Console.WriteLine($"\n{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber,secondNumber);
+            Helpers.StoreCalculations(firstNumber,secondNumber, "/");
         }
     }
 }
