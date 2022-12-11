@@ -12,6 +12,8 @@ Console Calculator application, developed using C#.
 
 * Other operations was added (Square Root and Exponent)
 
+* The user can show how many times the calculator was used
+
 * The user can view and store the latest results, and use or delete them
 
   ![image](https://user-images.githubusercontent.com/38431500/206930002-22bc5329-2cec-42be-a91e-6a75c168fa2a.png)
