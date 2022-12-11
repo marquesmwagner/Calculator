@@ -54,5 +54,13 @@ namespace Calculator
             numberOfUses++;
             Helpers.StoreCalculations(firstNumber,secondNumber, "/");
         }
+        internal void SquareRoot()
+        {
+            Console.WriteLine("\nType a number or choose a result(type r)");
+            var number = Helpers.GetNumber();
+            Console.WriteLine($"\nSquare Root of {number} = {Math.Sqrt(number)}");
+            numberOfUses++;
+            Helpers.StoreCalculations(number, 0, "Square");
+        }
     }
 }

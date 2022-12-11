@@ -60,7 +60,14 @@ namespace Calculator
             Console.WriteLine("--------------------\n");
             foreach (var calculation in calculator) 
             {
-                Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+                if (calculation.Signal == "Square")
+                {
+                    Console.WriteLine($"{calculation.Signal} Root of {calculation.FirstNumber} = {calculation.Result}");
+                }
+                else
+                {
+                    Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+                }
             }
             Console.WriteLine("\n--------------------");
         }
