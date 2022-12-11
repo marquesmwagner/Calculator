@@ -62,5 +62,15 @@ namespace Calculator
             numberOfUses++;
             Helpers.StoreCalculations(number, 0, "Square");
         }
+        internal void Exponent()
+        {
+            Console.WriteLine("\nType the first number(base) or choose a result(type r)");
+            var firstNumber = Helpers.GetNumber();
+            Console.WriteLine("\nType the second number(exponent) or choose a result(type r)");
+            var secondNumber = Helpers.GetNumber();
+            Console.WriteLine($"\n{firstNumber} exponent to {secondNumber} = {Math.Pow(firstNumber, secondNumber)}");
+            numberOfUses++;
+            Helpers.StoreCalculations(firstNumber, secondNumber, "exponent");
+        }
     }
 }

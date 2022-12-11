@@ -58,15 +58,19 @@ namespace Calculator
         {
             Console.WriteLine("\nLastest calculations:");
             Console.WriteLine("--------------------\n");
-            foreach (var calculation in calculator) 
+            foreach (var calculation in calculator)
             {
-                if (calculation.Signal == "Square")
+                switch (calculation.Signal)
                 {
-                    Console.WriteLine($"{calculation.Signal} Root of {calculation.FirstNumber} = {calculation.Result}");
-                }
-                else
-                {
-                    Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+                    case "Square":
+                        Console.WriteLine($"{calculation.Signal} Root of {calculation.FirstNumber} = {calculation.Result}");
+                        break;
+                    case "exponent":
+                        Console.WriteLine($"{calculation.FirstNumber} exponent to {calculation.SecondNumber} = {calculation.Result}");
+                        break;
+                    default:
+                        Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+                        break;
                 }
             }
             Console.WriteLine("\n--------------------");

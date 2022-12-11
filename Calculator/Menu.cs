@@ -24,6 +24,7 @@ namespace Calculator
                 Console.WriteLine("\tM - Multiplication");
                 Console.WriteLine("\tD - Division");
                 Console.WriteLine("\tSQ - Square Root");
+                Console.WriteLine("\tE - Exponent");
                 Console.WriteLine("\tU - View the amount of times the calculator was used");
                 Console.WriteLine("\tV - View the latest calculations");
                 Console.WriteLine("\tR - Delete the latest calculations");
@@ -47,6 +48,9 @@ namespace Calculator
                         break;
                     case "sq":
                         engine.SquareRoot();
+                        break;
+                    case "e":
+                        engine.Exponent();
                         break;
                     case "u":
                         Helpers.PrintNumberOfUses(CalculatorEngine.numberOfUses);
