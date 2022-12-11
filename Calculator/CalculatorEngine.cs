@@ -11,9 +11,9 @@ namespace Calculator
         public static int numberOfUses = 0;
         internal void Addition()
         {
-            Console.WriteLine("\nType the first number: ");
+            Console.WriteLine("\nType the first number or choose a result(type r)");
             var firstNumber = Helpers.GetNumber();
-            Console.WriteLine("\nType the second number: ");
+            Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
             numberOfUses++;
@@ -21,9 +21,9 @@ namespace Calculator
         }
         internal void Subtraction() 
         {
-            Console.WriteLine("\nType the first number: ");
+            Console.WriteLine("\nType the first number or choose a result(type r)");
             var firstNumber = Helpers.GetNumber();
-            Console.WriteLine("\nType the second number: ");
+            Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
             numberOfUses++;
@@ -31,9 +31,9 @@ namespace Calculator
         }
         internal void Multiplication()
         {
-            Console.WriteLine("\nType the first number: ");
+            Console.WriteLine("\nType the first number or choose a result(type r)");
             var firstNumber = Helpers.GetNumber();
-            Console.WriteLine("\nType the second number: ");
+            Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
             Console.WriteLine($"\n{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
             numberOfUses++;
@@ -41,9 +41,9 @@ namespace Calculator
         }
         internal void Division()
         {
-            Console.WriteLine("\nType the first number: ");
+            Console.WriteLine("\nType the first number or choose a result(type r)");
             var firstNumber = Helpers.GetNumber();
-            Console.WriteLine("\nType the second number: ");
+            Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
             while (secondNumber == 0)
             {

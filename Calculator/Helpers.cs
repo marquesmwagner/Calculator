@@ -13,13 +13,24 @@ namespace Calculator
         internal static double GetNumber() 
         {
             var input = "";
+            var number = 0.0;
             input = Console.ReadLine();
 
-            var number = 0.0;
+            if (input.Trim().ToLower() == "r" && calculator.Any())
+            {
+                PrintLatestCalculations();
+                Console.WriteLine("\nChoose a result from the list above (list start from 0)");
+                var inputChoice = Console.ReadLine();
+                var numChoice = 0;
+                int.TryParse(inputChoice, out numChoice);
+                number = calculator[numChoice].Result;
+                return number;
+            }
+
             while (!double.TryParse(input, out number))
             {
-                Console.WriteLine("Invalid input. Please enter a valid number.");
-                input= Console.ReadLine();
+                Console.WriteLine("Invalid input or list is empty. Please enter a valid number.");
+                input = Console.ReadLine();
             }
             return number;
         }
