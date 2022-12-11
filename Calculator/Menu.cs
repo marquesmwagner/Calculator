@@ -24,7 +24,8 @@ namespace Calculator
                 Console.WriteLine("\tM - Multiplication");
                 Console.WriteLine("\tD - Division");
                 Console.WriteLine("\tU - View the amount of times the calculator was used");
-                Console.WriteLine("\tV - View the lastest calculations");
+                Console.WriteLine("\tV - View the latest calculations");
+                Console.WriteLine("\tR - Delete the latest calculations");
                 Console.WriteLine("\tQ - Quit Program");
 
                 string op = Console.ReadLine().Trim().ToLower();
@@ -49,12 +50,15 @@ namespace Calculator
                     case "v":
                         Helpers.PrintLatestCalculations();
                         break;
+                    case "r":
+                        Helpers.DeleteCalculations();
+                        break;
                     case "q":
                         Console.WriteLine("\nQuit Program. Thx for use!");
                         calcIsRun = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid input\n");
+                        Console.WriteLine("\nInvalid input");
                         break;
                 }
             } while (!calcIsRun);

@@ -37,9 +37,15 @@ namespace Calculator
                 Signal = signal
             });
         }
+        internal static void DeleteCalculations()
+        {
+            calculator.Clear();
+            Console.WriteLine("\nDeleted all calculations.");
+            PrintLatestCalculations();
+        }
         internal static void PrintLatestCalculations()
         {
-            Console.WriteLine("\nLastest Calculatios:");
+            Console.WriteLine("\nLastest calculations:");
             Console.WriteLine("--------------------\n");
             foreach (var calculation in calculator) 
             {
