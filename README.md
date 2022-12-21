@@ -1,7 +1,7 @@
 # Calculator
 My first project in C#.
 
-Console Calculator application, developed using C#.
+Calculator console application, developed using C#.
 
 # Features
 * All four basic operations(addition, subtraction, multiplication, and division).
