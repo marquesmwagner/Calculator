@@ -15,9 +15,10 @@ namespace Calculator
             var firstNumber = Helpers.GetNumber();
             Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
-            Console.WriteLine($"\n{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+            var result = firstNumber + secondNumber;
+            Console.WriteLine($"\n{firstNumber} + {secondNumber} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber, "+");
+            Helpers.StoreCalculations(firstNumber, secondNumber, "+", result);
         }
         internal void Subtraction() 
         {
@@ -25,9 +26,10 @@ namespace Calculator
             var firstNumber = Helpers.GetNumber();
             Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
-            Console.WriteLine($"\n{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
+            var result = firstNumber - secondNumber;
+            Console.WriteLine($"\n{firstNumber} - {secondNumber} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber, "-");
+            Helpers.StoreCalculations(firstNumber, secondNumber, "-", result);
         }
         internal void Multiplication()
         {
@@ -35,9 +37,10 @@ namespace Calculator
             var firstNumber = Helpers.GetNumber();
             Console.WriteLine("\nType the second number or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
-            Console.WriteLine($"\n{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+            var result = firstNumber * secondNumber;
+            Console.WriteLine($"\n{firstNumber} * {secondNumber} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber, "*");
+            Helpers.StoreCalculations(firstNumber, secondNumber, "*", result);
         }
         internal void Division()
         {
@@ -50,17 +53,19 @@ namespace Calculator
                 Console.WriteLine("Enter a non-zero divisor.");
                 secondNumber = Helpers.GetNumber();
             }
-            Console.WriteLine($"\n{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+            var result = firstNumber / secondNumber;
+            Console.WriteLine($"\n{firstNumber} / {secondNumber} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber,secondNumber, "/");
+            Helpers.StoreCalculations(firstNumber,secondNumber, "/", result);
         }
         internal void SquareRoot()
         {
             Console.WriteLine("\nType a number or choose a result(type r)");
             var number = Helpers.GetNumber();
-            Console.WriteLine($"\nSquare Root of {number} = {Math.Sqrt(number)}");
+            var result = Math.Sqrt(number);
+            Console.WriteLine($"\nSquare Root of {number} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(number, 0, "Square");
+            Helpers.StoreCalculations(number, 0, "Square", result);
         }
         internal void Exponent()
         {
@@ -68,9 +73,10 @@ namespace Calculator
             var firstNumber = Helpers.GetNumber();
             Console.WriteLine("\nType the second number(exponent) or choose a result(type r)");
             var secondNumber = Helpers.GetNumber();
-            Console.WriteLine($"\n{firstNumber} exponent to {secondNumber} = {Math.Pow(firstNumber, secondNumber)}");
+            var result = Math.Pow(firstNumber, secondNumber);
+            Console.WriteLine($"\n{firstNumber} exponent to {secondNumber} = {result}");
             numberOfUses++;
-            Helpers.StoreCalculations(firstNumber, secondNumber, "exponent");
+            Helpers.StoreCalculations(firstNumber, secondNumber, "exponent", result);
         }
     }
 }

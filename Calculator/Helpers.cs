@@ -38,13 +38,13 @@ namespace Calculator
         {
             Console.WriteLine($"\nThe Calculator was used {uses} times.");
         }
-        internal static void StoreCalculations(double firstNumber, double secondNumber, string signal)
+        internal static void StoreCalculations(double firstNumber, double secondNumber, string signal, double result)
         {
             calculator.Add(new Models.Calculator
             {
                 FirstNumber = firstNumber,
                 SecondNumber = secondNumber,
-                Result = firstNumber + secondNumber,
+                Result = result,
                 Signal = signal
             });
         }
@@ -63,13 +63,13 @@ namespace Calculator
                 switch (calculation.Signal)
                 {
                     case "Square":
-                        Console.WriteLine($"{calculation.Signal} Root of {calculation.FirstNumber} = {calculation.Result}");
+                        Console.WriteLine($"{calculation.Signal} Root of {calculation.FirstNumber} = {calculation.Result:0.00}");
                         break;
                     case "exponent":
-                        Console.WriteLine($"{calculation.FirstNumber} exponent to {calculation.SecondNumber} = {calculation.Result}");
+                        Console.WriteLine($"{calculation.FirstNumber} exponent to {calculation.SecondNumber} = {calculation.Result:0.00}");
                         break;
                     default:
-                        Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result}");
+                        Console.WriteLine($"{calculation.FirstNumber} {calculation.Signal} {calculation.SecondNumber} = {calculation.Result:0.00}");
                         break;
                 }
             }
