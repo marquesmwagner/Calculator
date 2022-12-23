@@ -16,4 +16,4 @@ Calculator console application, developed using C#.
 
 * The user can view and store the latest results, and use or delete them.
 
-  ![image](https://user-images.githubusercontent.com/38431500/206930002-22bc5329-2cec-42be-a91e-6a75c168fa2a.png)
+  ![image](https://user-images.githubusercontent.com/38431500/209396135-19922a06-27ae-46e0-923c-d31864d5e866.png)
